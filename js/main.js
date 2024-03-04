@@ -58,7 +58,7 @@ scrollUpIcon.addEventListener('click', function () {
 // Function to show content with fading effect
 function showContent() {
   document.querySelector('.loader').style.display = 'none';
-  document.querySelector('.content').classList.add('show'); // Add 'show' class
+  document.querySelector('.page-content').classList.add('show'); // Add 'show' class
 }
 
 // Simulate loading time (1 second in this code)

@@ -71,7 +71,7 @@ body {
 .scroll-up.show {
   right: 10px;
 }
-.content {
+.page-content {
   opacity: 0;
   transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
@@ -79,7 +79,7 @@ body {
   -ms-transition: opacity 1s ease;
   -o-transition: opacity 1s ease;
 }
-.content.show {
+.page-content.show {
   opacity: 1; 
 }
 .scroller {
@@ -1326,6 +1326,13 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+}
+@media (min-width: 992px) {
+  .stats .container::after {
+    content: "";
+    grid-column: span 1;
+    grid-row: 2;
+  }
 }
 .stats .box {
   background-color: white;
