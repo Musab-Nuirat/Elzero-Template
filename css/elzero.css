@@ -50,6 +50,27 @@ body {
   animation: rotate-left 1s linear infinite;
   -webkit-animation: rotate-left 1s linear infinite;
 }
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: -100px;
+  font-size: 24px;
+  color: var(--main-color);
+  background-color: #ececec;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, right 0.3s; /* Added right property to transition */
+  z-index: 99999;
+}
+.scroll-up:hover {
+  color: #fff;
+  background-color: #333;
+}
+.scroll-up.show {
+  right: 10px;
+}
 .content {
   opacity: 0;
   transition: opacity 1s ease;

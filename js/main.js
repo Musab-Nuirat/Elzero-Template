@@ -1,5 +1,4 @@
 // Create Page Scroll Progress
-
 let pageScroller = document.querySelector(".scroller");
 let scrollHeight = document.documentElement.scrollHeight;
 let clientHeight = document.documentElement.clientHeight;
@@ -35,6 +34,24 @@ function textTypingEffect(element, text, i = 0) {
 }
 setTimeout(() => textTypingEffect(div, " "), 10);
 setTimeout(() => textTypingEffect(div, text), 1000);
+
+
+// Scroll up button
+const scrollUpIcon = document.querySelector('.scroll-up');
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= 1500) {
+    scrollUpIcon.classList.add("show");
+  } else {
+    scrollUpIcon.classList.remove("show");
+  }
+});
+scrollUpIcon.addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
 
 
 
