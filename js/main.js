@@ -16,6 +16,28 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Text Typewriter Effect 
+const div = document.querySelector(".landing .text h1");
+const text = div.innerHTML;
+
+function textTypingEffect(element, text, i = 0) {
+  if (i === 0) {
+    element.textContent = "";
+  }
+  element.textContent += text[i];
+
+  // If we reached the end of the string
+  if (i === text.length - 1) {
+    return;
+  }
+  setTimeout(() => textTypingEffect(element, text, i + 1), 50);
+
+}
+setTimeout(() => textTypingEffect(div, " "), 10);
+setTimeout(() => textTypingEffect(div, text), 1000);
+
+
+
 // Function to show content with fading effect
 function showContent() {
   document.querySelector('.loader').style.display = 'none';
