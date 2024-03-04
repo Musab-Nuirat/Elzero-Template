@@ -7,7 +7,7 @@ let clientHeight = document.documentElement.clientHeight;
 
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
-  
+
   if (scrollTop > 72) { // avoid scroller in the header
     pageScroller.style.width = `${(scrollTop / (scrollHeight - clientHeight)) * 100}%`;
   }
@@ -22,19 +22,13 @@ function showContent() {
   document.querySelector('.content').classList.add('show'); // Add 'show' class
 }
 
-// Simulate loading time (1 second in this example)
+// Simulate loading time (1 second in this code)
 setTimeout(showContent, 1000);
 
-/*
- ** Countdown Timer
- ** Video URL: https://www.youtube.com/watch?v=eFsiOTJrrE8
- */
+/* Countdown Timer */
 
 // The End Of The Year Date
-// 1000 milliseconds = 1 Second
-
-let countDownDate = new Date("Dec 31, 2022 23:59:59").getTime();
-// console.log(countDownDate);
+let countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
 let counter = setInterval(() => {
   // Get Date Now
@@ -55,21 +49,16 @@ let counter = setInterval(() => {
   document.querySelector(".minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes;
   document.querySelector(".seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 
-  if (dateDiff < 0) {
+  if (dateDiff <= 0) {
     clearInterval(counter);
+    let timeunits = document.querySelectorAll('.time .unit span:nth-child(2n-1)');
+    timeunits.forEach((unit) => {
+      unit.innerHTML = '00';
+    });
   }
 }, 1000);
 
-/*
- ** Animate Width On Scrolling
- ** Video URL: https://youtu.be/sbIoIKI9FOc
- */
-
-/*
- ** Increase Numbers On Scrolling
- ** Video URL: https://youtu.be/PLsUdgLnzgQ
- */
-
+/* Animate Width and Increase Numbers On Scrolling */
 let progressSpans = document.querySelectorAll(".the-progress span");
 let section = document.querySelector(".our-skills");
 
@@ -101,4 +90,4 @@ function startCount(el) {
       clearInterval(count);
     }
   }, 2000 / goal);
-}
+};

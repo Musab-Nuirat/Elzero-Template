@@ -164,6 +164,11 @@ ul {
   background-repeat: no-repeat;
   position: absolute;
 }
+@media (max-width: 991px) {
+  .dots {
+    display: none;
+  }
+}
 .dots-up {
   top: 200px;
   right: 0;
@@ -1000,7 +1005,8 @@ ul {
   transition: var(--main-transition);
 }
 .events .info .time .unit span {
-  display: block;
+  display: flex;
+  justify-content: center;
   transition: var(--main-transition);
 }
 .events .info .time .unit span:first-child {
@@ -1455,6 +1461,13 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
+}
+@media (min-width: 992px) {
+  .footer .container::after {
+    content: "";
+    grid-column: span 1;
+    grid-row: 2;
+  }
 }
 .footer .box h3 {
   color: white;
