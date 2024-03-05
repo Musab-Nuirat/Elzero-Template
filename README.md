@@ -17,7 +17,7 @@ In this customized version of Elzero Template, I've incorporated several enhance
 - **Scroll Progress Indicator:** Included a scroll progress indicator to provide users with feedback on their location within the page.
 - **Page Loader:** Integrated a loading animation for a polished user experience.
 
-## Preview
+## Preview _[Here](https://musab-nuirat.github.io/Elzero-Template/)_
 
 ![Elzero Template Preview](/imgs/full-design.png)
 
